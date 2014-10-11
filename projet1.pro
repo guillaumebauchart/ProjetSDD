@@ -12,3 +12,6 @@ qtcAddDeployment()
 HEADERS += \
     complexe.h
 
+OTHER_FILES += \
+    .gitignore
+
