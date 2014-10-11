@@ -1,6 +1,7 @@
 #include "complexe.h"
 #include <sstream>
 #include <iostream>
+#include <math.h>
 
 using namespace std;
 
@@ -48,3 +49,7 @@ Complexe Complexe::conj()
     return Complexe(this->R,-this->I);
 }
 
+double Complexe::norme()
+{
+    return sqrt(this->I*this->I+this->R*this->R);
+}

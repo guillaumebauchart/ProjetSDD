@@ -16,6 +16,7 @@ public:
     Complexe operator*(Complexe z);
     Complexe operator*(double k);
     Complexe conj();
+    double norme();
 
     friend std::ostream& operator<<(std::ostream&, const Complexe& z);
 
