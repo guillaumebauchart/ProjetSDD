@@ -13,7 +13,7 @@ int main()
 
     cout << z1 << " et " << z2 << endl;
     cout << "Addition : " << z1+z2 << endl;
-    cout << "Multiplication : " << z2*2.0 << endl;
+    cout << "Multiplication : " << (z1+z2)*z2*2.0 << endl;
 
     cout << endl << endl << "***********************************" << endl << endl;
 

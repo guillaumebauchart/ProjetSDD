@@ -6,11 +6,11 @@
 class Complexe
 {
 public:
-    double C;
+    double I;
     double R;
 
 public:
-    Complexe(double R, double C);
+    Complexe(double R, double I);
     Complexe();
     Complexe operator+(Complexe z);
     Complexe operator*(Complexe z);

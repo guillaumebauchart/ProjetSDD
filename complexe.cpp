@@ -4,36 +4,43 @@
 
 using namespace std;
 
-Complexe::Complexe(double R, double C)
+Complexe::Complexe(double R, double I)
 {
-    this->C = C;
+    this->I = I;
     this->R = R;
 }
 
 Complexe::Complexe()
 {
-    this->C = 0;
+    this->I = 0;
     this->R = 0;
 }
 
 Complexe Complexe::operator+(Complexe z)
 {
-    return Complexe(this->R+z.R, this->C+z.C);
+    return Complexe(this->R+z.R, this->I+z.I);
 }
 
 Complexe Complexe::operator*(Complexe z)
 {
-    return Complexe(this->R*z.R-this->C*z.C, this->R*z.C + z.R*this->C);
+    return Complexe(this->R*z.R-this->I*z.I, this->R*z.I + z.R*this->I);
 }
 
 Complexe Complexe::operator*(double k)
 {
-    return Complexe(this->R*k, this->C*k);
+    return Complexe(this->R*k, this->I*k);
 }
 
 ostream& operator<<(ostream& out, const Complexe& z)
 {
-    return out << z.R << "+" << z.C << "i";
+    if(z.I < 0)
+    {
+        return out << z.R << z.I << "i";
+    }
+    else
+    {
+        return out << z.R << "+" << z.I << "i";
+    }
 }
 
 
