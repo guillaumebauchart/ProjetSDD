@@ -43,4 +43,8 @@ ostream& operator<<(ostream& out, const Complexe& z)
     }
 }
 
+Complexe Complexe::conj()
+{
+    return Complexe(this->R,-this->I);
+}
 
