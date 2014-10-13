@@ -4,13 +4,13 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    complexe.cpp
+    class/complexe.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
 
 HEADERS += \
-    complexe.h
+    class/complexe.h
 
 OTHER_FILES += \
     .gitignore
