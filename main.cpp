@@ -1,5 +1,6 @@
 #include <iostream>
 #include "class/complexe.h"
+#include <list>
 
 using namespace std;
 
@@ -20,6 +21,17 @@ int main()
     cout << "Norme de " << z4 << ": " << z4.norme();
 
     cout << endl << endl << "***********************************" << endl << endl;
+
+    list<Complexe> maListe;
+    maListe.push_back(Complexe(1.0, 1.0));
+    maListe.push_back(Complexe(1.0, -2.0));
+
+    list<Complexe>::const_iterator lit(maListe.begin()), endIt(maListe.end());
+
+    for(;lit != endIt; lit++)
+    {
+        cout << *lit << endl;
+    }
 
     return 0;
 }
